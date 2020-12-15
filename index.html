@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+  <h1 id="head">Testing</h1>  
+  <h1 class="head">Testing</h1>  
+  <h3 class="head">Testing</h3>  
+<h4 id="none">Display None</h4>
+<h4 id="block">Display Block</h4>
+<img id="image" src="images/lotus-getty.jpg" alt="img" width="150">
+
+<h1 id="vartest"> variable </h1>
+<h1 id="vartext"> variable </h1>
+
+
+
+
+<script>
+//dom manipulation
+document.getElementById('head').innerHTML = "Dom Id";
+document.getElementsByClassName('head')[0].innerHTML = "Dom Class";
+document.getElementsByTagName('h3')[0].innerHTML = "Dom Tagname";
+
+// css manipulation
+document.getElementById('head').style.color = "red";
+document.getElementsByClassName('head')[0].style.color = "green";
+document.getElementsByClassName('head')[1].style.fontSize = "24px";
+document.getElementsByClassName('head')[1].style.backgroundColor = "red";
+document.getElementsByClassName('head')[1].style.padding = "15px";
+document.getElementById('none').style.display = "none";
+document.getElementById('block').style.display = "block";
+document.getElementById('image').src = "images/2.jpg";
+
+
+// Core concepts
+
+// Variables (global scope)
+
+var vartest = document.getElementById('vartest');
+vartest.style.color = "green";
+vartest.style.fontSize = "18px";
+vartest.innerHTML = "Variable Intro";
+
+var text = "Variable Text";
+document.getElementById('vartext').innerHTML = text;
+
+// variables using arithmetic operators
+
+var a, b, c;
+a = 10;
+b = 15; 
+c = a + b;
+d = a - b;
+e = a * b;
+f = a / b;
+g = a % b;
+
+console.log('a==' + a);
+console.log('b==' + b);
+
+// increment
+c = c + 1;
+console.log(c);
+// increment
+c++;
+console.log(c);
+// increment
+c += 2;
+console.log(c);
+
+// decrement
+c = c - 1;
+console.log(c);
+// decrement
+c--;
+console.log(c);
+// decrement
+c -= 2;
+console.log(c);
+
+console.log(d);
+console.log(e);
+console.log(f);
+console.log(g);
+
+// let and cons variables (local scope)
+
+
+let letvar;
+letvar = 6
+console.log(letvar);
+
+const constvar = 15; // should assign value at the declaration time
+console.log(constvar);
+
+/* Data types ****
+1.string
+2.boolean
+3.object
+4.number
+5.undefined
+
+undefined vs not defined
+
+undefined
+not assigned any value to variable
+
+not defined
+there is variable in that name - not declared but trying to call
+
+
+*/
+
+
+let name = "Aish"; // string
+let age = 45; // number
+let myarray = []; // object
+let mystring = null; // object but value empty
+let error = undefined; // object but value undefined
+let isLogged = false; // object but value undefined
+
+
+
+
+console.log(name);
+console.log(typeof name); // typeof to know datatype
+console.log(typeof age);
+console.log(typeof myarray);
+console.log(typeof mystring);
+console.log(typeof error);
+console.log(typeof isLogged);
+
+
+/* Comparison Operators */
+
+
+let comp1 = 5;
+let comp2 = 5;
+
+console.log(comp1 == comp2);
+console.log(comp1 >= comp2);
+console.log(comp1 <= comp2);
+console.log(comp1 > comp2);
+console.log(comp1 < comp2);
+console.log(comp1 != comp2);
+
+
+/* = vs == vs === 
+
+= assignement operators ; assigning value to variable
+== comparison operator ; compare variables value
+=== comparing values and their type at a time
+
+*/
+
+let comp3 = 5;
+let comp4 = "5";
+console.log(comp3 === comp4);
+
+// logical operators
+
+let log1 = 5;
+let log2 = 6;
+let value = false;
+
+console.log(log1 > 2 && log2 >10);
+console.log(log1 > 2 && log2 >2);
+console.log(log1 > 2 || log2 >10);
+console.log(!value); // will return opposit of the assigned value
+
+/* Conditional operators (Terinary)
+
+1.? to check 
+2.: else statement
+
+*/
+
+let x = 6;
+//let y = x !=5 ? 10 : x;
+let y = x == 5 ? 15 : x;
+console.log(y);
+
+</script>
+
+
+<script src="main.js"></script>
+
+
+</body>
+</html>
